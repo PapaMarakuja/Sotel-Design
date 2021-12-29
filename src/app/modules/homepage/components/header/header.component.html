@@ -1,9 +1,9 @@
 <header>
-	<div class="header">
+	<div class="header bg-lightMode-100 dark:bg-darkMode-100">
 		<div>Sotel.ArtDesign</div>
 		<div class="header-child">
 			<hero-icon
-				*ngIf="!isDark"
+				id="sun"
 				(click)="toggleDarkmode()"
 				name="sun"
 				hostDisplay="inlineBlock"
@@ -11,26 +11,39 @@
 				class="w-6 h-6"
 			></hero-icon
 			><hero-icon
-				*ngIf="isDark"
+				id="moon"
 				(click)="toggleDarkmode()"
 				name="moon"
 				hostDisplay="inlineBlock"
 				type="outline"
-				class="w-6 h-6"
+				class="w-6 h-6 absolute"
 			></hero-icon>
 			<hero-icon
+				id="abreMenu"
 				(click)="openCloseMenu()"
-				name="arrow-up"
+				name="chevron-up"
 				hostDisplay="inlineBlock"
 				type="outline"
 				class="w-6 h-6"
 			></hero-icon>
 		</div>
 	</div>
-	<div class="sub-menu">
-		<div>item</div>
-		<div>item</div>
-		<div>item</div>
-		<div>item</div>
+	<div class="sub-menu bg-lightMode-200 dark:bg-darkMode-200 grid grid-rows-2 grid-cols-2 grid-flow-col">
+		<div class="sub-child">
+			<hero-icon name="home" hostDisplay="inlineBlock" type="outline"></hero-icon>
+			<h1>Home</h1>
+		</div>
+		<div class="sub-child">
+			<hero-icon name="document-text" hostDisplay="inlineBlock" type="outline"></hero-icon>
+			<h1>Habilidades</h1>
+		</div>
+		<div class="sub-child">
+			<hero-icon name="user" hostDisplay="inlineBlock" type="outline"></hero-icon>
+			<h1>Sobre</h1>
+		</div>
+		<div class="sub-child">
+			<hero-icon name="user-group" hostDisplay="inlineBlock" type="outline"></hero-icon>
+			<h1>Testemunhas</h1>
+		</div>
 	</div>
 </header>
