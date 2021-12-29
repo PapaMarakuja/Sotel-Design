@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroIconName } from 'ng-heroicon';
 
 @Component({
 	selector: 'app-header',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-	constructor() { }
+	constructor() {}
 	isDark = false;
 	localDarkmode = JSON.parse(localStorage.getItem('isDarkmode') || '{}');
 
@@ -22,16 +22,11 @@ export class HeaderComponent implements OnInit {
 		this.darkMode();
 	}
 
-	openCloseMenu(open: boolean): void {
-		const menu = document.querySelector('#subMenu');
-
-		if (menu) {
-			if (open) {
-				menu.classList.remove('hidden');
-			} else {
-				menu.classList.add('hidden');
-			}
-		}
+	openCloseMenu(): void {
+		const menu = document.getElementsByClassName('sub-menu');
+		menu[0].classList.contains('active')
+			? menu[0].classList.remove('active')
+			: menu[0].classList.add('active');
 	}
 
 	toggleDarkmode() {
@@ -41,17 +36,12 @@ export class HeaderComponent implements OnInit {
 	}
 
 	darkMode(): void {
-		const toggle = document.querySelector('#switch');
 		const html = document.querySelector('html');
 
 		if (this.isDark) {
 			html?.classList.add('dark');
-			toggle?.classList.remove('bg-b-yellow', '-translate-x-2');
-			toggle?.classList.add('bg-dark-100', 'translate-x-full');
 		} else {
 			html?.classList.remove('dark');
-			toggle?.classList.add('bg-b-yellow', '-translate-x-2');
-			toggle?.classList.remove('bg-dark-100', 'translate-x-full');
 		}
 	}
 }
