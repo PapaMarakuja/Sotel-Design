@@ -1,6 +1,6 @@
 @import '~src/variables';
 
-header {
+.header {
 	background-color: white;
 	position: fixed;
 	bottom: 0;
@@ -10,11 +10,31 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 20px;
+	z-index: 10;
 
 	.header-child {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 10px;
+	}
+}
+
+.sub-menu {
+	background-color: #f2f2f2;
+	position: fixed;
+	bottom: -250px;
+	width: 100vw;
+	height: 250px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	border-radius: 0.75rem 0.75rem 0 0;
+	z-index: 9;
+	transition: bottom 0.5s ease-in-out;
+
+	&.active {
+		bottom: $hHeader;
 	}
 }

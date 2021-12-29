@@ -1,7 +1,36 @@
 <header>
-	<div>Sotel.ArtDesign</div>
-	<div class="header-child">
-		<hero-icon name="sun" hostDisplay="inlineBlock" type="outline" class="w-6 h-6"></hero-icon>
-		<hero-icon name="arrow-up" hostDisplay="inlineBlock" type="outline" class="w-6 h-6"></hero-icon>
+	<div class="header">
+		<div>Sotel.ArtDesign</div>
+		<div class="header-child">
+			<hero-icon
+				*ngIf="!isDark"
+				(click)="toggleDarkmode()"
+				name="sun"
+				hostDisplay="inlineBlock"
+				type="outline"
+				class="w-6 h-6"
+			></hero-icon
+			><hero-icon
+				*ngIf="isDark"
+				(click)="toggleDarkmode()"
+				name="moon"
+				hostDisplay="inlineBlock"
+				type="outline"
+				class="w-6 h-6"
+			></hero-icon>
+			<hero-icon
+				(click)="openCloseMenu()"
+				name="arrow-up"
+				hostDisplay="inlineBlock"
+				type="outline"
+				class="w-6 h-6"
+			></hero-icon>
+		</div>
+	</div>
+	<div class="sub-menu">
+		<div>item</div>
+		<div>item</div>
+		<div>item</div>
+		<div>item</div>
 	</div>
 </header>

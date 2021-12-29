@@ -5,7 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { sun, annotation, arrowUp, HeroIconModule } from 'ng-heroicon';
+import { sun, moon, annotation, arrowUp, HeroIconModule } from 'ng-heroicon';
 @NgModule({
 	declarations: [HeaderComponent, FooterComponent, ContactComponent, SkillsComponent, ProjectsComponent],
 	exports: [ContactComponent, FooterComponent, HeaderComponent, SkillsComponent, ProjectsComponent],
@@ -15,7 +15,8 @@ import { sun, annotation, arrowUp, HeroIconModule } from 'ng-heroicon';
 			{
 				annotation,
 				arrowUp,
-				sun
+				sun,
+				moon
 			},
 			{
 				defaultHostDisplay: 'block'
