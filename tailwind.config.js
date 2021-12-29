@@ -10,6 +10,18 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+                'darkMode': {
+                    100: '#121212',
+                    200: '#23272A',
+                    300: '#818181',
+                },
+
+                'lightMode': {
+                    100: '#FFFFFF',
+                    200: '#F2F2F2',
+                    300: '#CCCCCC',
+                },
+
 				'dark-800': '#121212',
 				'dark-700': '#1B1B1B',
 				'dark-600': '#1F1F1F',

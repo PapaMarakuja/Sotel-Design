@@ -1,7 +1,6 @@
 @import '~src/variables';
 
 .header {
-	background-color: white;
 	position: fixed;
 	bottom: 0;
 	width: 100vw;
@@ -17,18 +16,33 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 10px;
+
+		#sun,
+		#moon {
+			transition: all 0.3s ease-in-out;
+		}
+
+		&.active #sun {
+			transform: rotate(90deg) scale(0);
+			opacity: 0;
+		}
+
+		&:not(.active) #moon {
+			transform: rotate(-90deg) scale(0);
+			opacity: 0;
+		}
+
+		#abreMenu {
+			transition: all 0.3s ease-in-out;
+		}
 	}
 }
 
 .sub-menu {
-	background-color: #f2f2f2;
 	position: fixed;
 	bottom: -250px;
 	width: 100vw;
 	height: 250px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	padding: 20px;
 	border-radius: 0.75rem 0.75rem 0 0;
 	z-index: 9;
@@ -36,5 +50,18 @@
 
 	&.active {
 		bottom: $hHeader;
+	}
+
+	.sub-child {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+
+		hero-icon {
+			height: 2rem;
+			width: 2rem;
+		}
 	}
 }

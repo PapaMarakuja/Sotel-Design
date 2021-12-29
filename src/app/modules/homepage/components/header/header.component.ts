@@ -8,7 +8,7 @@ import { HeroIconName } from 'ng-heroicon';
 })
 export class HeaderComponent implements OnInit {
 	constructor() {}
-	isDark = false;
+	isDark: boolean = false;
 	localDarkmode = JSON.parse(localStorage.getItem('isDarkmode') || '{}');
 
 	ngOnInit(): void {
@@ -24,9 +24,14 @@ export class HeaderComponent implements OnInit {
 
 	openCloseMenu(): void {
 		const menu = document.getElementsByClassName('sub-menu');
+		const arrow = document.getElementById('abreMenu');
 		menu[0].classList.contains('active')
 			? menu[0].classList.remove('active')
 			: menu[0].classList.add('active');
+
+		arrow?.classList.contains('rotate-180')
+			? arrow.classList.remove('rotate-180')
+			: arrow?.classList.add('rotate-180');
 	}
 
 	toggleDarkmode() {
@@ -37,11 +42,14 @@ export class HeaderComponent implements OnInit {
 
 	darkMode(): void {
 		const html = document.querySelector('html');
+		const icon = document.getElementsByClassName('header-child');
 
 		if (this.isDark) {
 			html?.classList.add('dark');
+			icon[0].classList.add('active');
 		} else {
 			html?.classList.remove('dark');
+			icon[0].classList.remove('active');
 		}
 	}
 }
