@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://unicons.iconscout.com/release/v4.0.0/css/line.css");
+
+@font-face {
+	font-family: "Cheque Regular";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Cheque Regular"), url("assets/fonts/Cheque-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Cheque Black";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Cheque Black"), url("assets/fonts/Cheque-Black.woff") format("woff");
+}
+
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+.cheque {
+	font-family: "Cheque Regular";
+}
+
+.transicao {
+	@apply transition-all duration-300;
+}
+
+.section {
+	padding: 2rem 0 4rem;
+}
