@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,22 +21,8 @@ import {
 	HeroIconModule
 } from 'ng-heroicon';
 @NgModule({
-	declarations: [
-		HeaderComponent,
-		FooterComponent,
-		ContactComponent,
-		SkillsComponent,
-		ProjectsComponent,
-		HomeComponent
-	],
-	exports: [
-		ContactComponent,
-		FooterComponent,
-		HeaderComponent,
-		SkillsComponent,
-		ProjectsComponent,
-		HomeComponent
-	],
+	declarations: [HeaderComponent, FooterComponent, SkillsComponent, ProjectsComponent, HomeComponent],
+	exports: [FooterComponent, HeaderComponent, SkillsComponent, ProjectsComponent, HomeComponent],
 	imports: [
 		CommonModule,
 		RouterModule,

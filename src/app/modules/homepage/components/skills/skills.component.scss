@@ -1,0 +1,11 @@
+@import '~src/variables';
+
+.section {
+	height: calc(100vh - #{$mobHeader});
+
+	.texts {
+		.title {
+			font-size: clamp(18px, 3vw, 32px);
+		}
+	}
+}

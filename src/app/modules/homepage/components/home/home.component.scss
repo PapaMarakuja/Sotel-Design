@@ -50,3 +50,55 @@
 		}
 	}
 }
+
+@media (min-width: 850px) {
+	.section {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+
+		.main {
+			padding-top: $deskHeader;
+
+			.texts {
+				.title {
+					font-size: 2.3rem;
+					line-height: 50px;
+				}
+				.sub-title {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1050px) {
+	.section .main {
+		flex-direction: row;
+		justify-content: center;
+		height: 100%;
+
+		.texts {
+			max-width: 50%;
+			text-align: start;
+
+			.title {
+				font-size: 3rem;
+				line-height: 70px;
+			}
+
+			.paragraph {
+				margin-top: 1rem;
+			}
+		}
+
+		.img {
+			max-width: fit-content;
+			svg {
+				width: 30rem;
+				height: 30rem;
+			}
+		}
+	}
+}
