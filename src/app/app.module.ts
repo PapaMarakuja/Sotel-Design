@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './modules/homepage/homepage.component';
 import { HomepageModule } from './modules/homepage/homepage.module';
 import { menu, HeroIconModule } from 'ng-heroicon';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
 	declarations: [AppComponent, HomepageComponent],
@@ -12,6 +13,7 @@ import { menu, HeroIconModule } from 'ng-heroicon';
 		BrowserModule,
 		AppRoutingModule,
 		HomepageModule,
+		RouterModule,
 		HeroIconModule.forRoot(
 			{
 				menu

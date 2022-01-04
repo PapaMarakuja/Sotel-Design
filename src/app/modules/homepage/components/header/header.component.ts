@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroIconName } from 'ng-heroicon';
 
 @Component({
 	selector: 'app-header',
@@ -34,7 +33,7 @@ export class HeaderComponent implements OnInit {
 			: arrow?.classList.add('rotate-180');
 	}
 
-	toggleDarkmode() {
+	toggleDarkmode(): void {
 		this.isDark = !this.isDark;
 		localStorage.setItem('isDarkmode', String(this.isDark));
 		this.darkMode();
@@ -51,5 +50,27 @@ export class HeaderComponent implements OnInit {
 			html?.classList.remove('dark');
 			icon[0].classList.remove('active');
 		}
+	}
+
+	redirectTo(section: string): void {
+		const element = document.querySelector(`app-${section}`);
+
+		switch (section) {
+			case 'home':
+				window.scroll({ top: 0, behavior: 'smooth' });
+				break;
+			case 'skills':
+				element?.scrollIntoView({ behavior: 'smooth' });
+				break;
+			case 'about':
+				element?.scrollIntoView({ behavior: 'smooth' });
+				break;
+			case 'feedback':
+				element?.scrollIntoView({ behavior: 'smooth' });
+				break;
+			default:
+				break;
+		}
+		this.openCloseMenu();
 	}
 }

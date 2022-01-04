@@ -11,12 +11,18 @@ module.exports = {
 		extend: {
 			colors: {
                 'darkMode': {
+					'font-primary': '#F1FFFF',
+					'font-secundary': '#c9d1d9',
+					'neonBlue': '#38bdf8',
                     100: '#121212',
                     200: '#23272A',
                     300: '#818181',
                 },
 
                 'lightMode': {
+					'font-primary': '#0f172a',
+					'font-secundary': '#475569',
+					'neonBlue': '#0ea5e9',
                     100: '#FFFFFF',
                     200: '#F2F2F2',
                     300: '#CCCCCC',

@@ -1,7 +1,7 @@
 @import '~src/variables';
 
 section {
-	height: calc(100vh - #{$hHeader});
+	height: calc(100vh - #{$mobHeader});
 }
 
 .teste {
@@ -16,7 +16,7 @@ section {
 	height: 100%;
 	z-index: -1;
 	position: absolute;
-	background: $orange;
+	background: $primary-orange;
 	transform: skewX(-10deg);
 	top: 0;
 	left: 0;

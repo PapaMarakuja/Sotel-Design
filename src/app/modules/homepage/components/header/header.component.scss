@@ -4,36 +4,50 @@
 	position: fixed;
 	bottom: 0;
 	width: 100vw;
-	height: $hHeader;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
+	height: $mobHeader;
 	z-index: 10;
 
-	.header-child {
+	.fix {
+		position: fixed;
+		bottom: 0;
+		width: 100vw;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 10px;
+		height: $mobHeader;
+		padding: 0 20px;
 
-		#sun,
-		#moon {
-			transition: all 0.3s ease-in-out;
+		.desktop-header,
+		.header-child {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 10px;
 		}
 
-		&.active #sun {
-			transform: rotate(90deg) scale(0);
-			opacity: 0;
+		.desktop-header {
+			display: none;
 		}
 
-		&:not(.active) #moon {
-			transform: rotate(-90deg) scale(0);
-			opacity: 0;
-		}
+		.header-child {
+			#sun,
+			#moon {
+				transition: all 0.3s ease-in-out;
+			}
 
-		#abreMenu {
-			transition: all 0.3s ease-in-out;
+			&.active #sun {
+				transform: rotate(90deg) scale(0);
+				opacity: 0;
+			}
+
+			&:not(.active) #moon {
+				transform: rotate(-90deg) scale(0);
+				opacity: 0;
+			}
+
+			#abreMenu {
+				transition: all 0.3s ease-in-out;
+			}
 		}
 	}
 }
@@ -41,6 +55,9 @@
 .sub-menu {
 	position: fixed;
 	bottom: -250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100vw;
 	height: 250px;
 	padding: 20px;
@@ -49,19 +66,85 @@
 	transition: bottom 0.5s ease-in-out;
 
 	&.active {
-		bottom: $hHeader;
+		bottom: $mobHeader;
 	}
 
-	.sub-child {
+	.content {
+		max-width: 550px;
+		width: 100%;
+		height: 100%;
+
+		.sub-child {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex-direction: column;
+			user-select: none;
+			border-radius: 30px;
+			transition: background-color 0.125s ease-out;
+			cursor: pointer;
+
+			hero-icon {
+				height: 2rem;
+				width: 2rem;
+			}
+
+			&:hover,
+			&:active {
+				background-color: $darkMode-300;
+			}
+		}
+	}
+}
+
+@media (min-width: 850px) {
+	.header {
+		top: 0;
+		height: $deskHeader;
+		width: 100vw;
+		box-shadow: 0 -1px 8px rgba($color: #000000, $alpha: 0.3);
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		text-align: center;
-		flex-direction: column;
 
-		hero-icon {
-			height: 2rem;
-			width: 2rem;
+		.fix {
+			top: 0;
+			height: $deskHeader;
+			padding: 0 40px;
+
+			.desktop-header {
+				display: flex;
+				gap: 25px;
+				padding-right: 24px;
+				cursor: pointer;
+				user-select: none;
+
+				h1 {
+					font-weight: 300;
+					transition: color 0.125s ease-out;
+
+					&:hover {
+						color: $secundary-orange;
+					}
+				}
+				.select {
+					font-weight: 400;
+					color: $primary-orange;
+
+					&:hover {
+						color: $secundary-orange;
+					}
+				}
+			}
+
+			.header-child {
+				#abreMenu {
+					display: none;
+				}
+			}
 		}
+	}
+	.sub-menu {
+		display: none;
 	}
 }
