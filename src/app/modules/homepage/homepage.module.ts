@@ -5,6 +5,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { HomeComponent } from './components/home/home.component';
+import { RouterModule } from '@angular/router';
 import {
 	sun,
 	moon,
@@ -14,15 +16,31 @@ import {
 	userGroup,
 	chevronUp,
 	x,
+	cube,
 	annotation,
 	arrowUp,
 	HeroIconModule
 } from 'ng-heroicon';
 @NgModule({
-	declarations: [HeaderComponent, FooterComponent, ContactComponent, SkillsComponent, ProjectsComponent],
-	exports: [ContactComponent, FooterComponent, HeaderComponent, SkillsComponent, ProjectsComponent],
+	declarations: [
+		HeaderComponent,
+		FooterComponent,
+		ContactComponent,
+		SkillsComponent,
+		ProjectsComponent,
+		HomeComponent
+	],
+	exports: [
+		ContactComponent,
+		FooterComponent,
+		HeaderComponent,
+		SkillsComponent,
+		ProjectsComponent,
+		HomeComponent
+	],
 	imports: [
 		CommonModule,
+		RouterModule,
 		HeroIconModule.withIcons(
 			{
 				annotation,
@@ -34,7 +52,8 @@ import {
 				user,
 				userGroup,
 				chevronUp,
-				x
+				x,
+				cube
 			},
 			{
 				defaultHostDisplay: 'block'

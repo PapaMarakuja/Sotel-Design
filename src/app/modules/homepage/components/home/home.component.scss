@@ -1,0 +1,52 @@
+@import '~src/variables';
+
+.section {
+	height: calc(100vh - #{$mobHeader});
+
+	.main {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		padding-top: $mobHeader;
+		gap: 2rem;
+
+		.img,
+		.texts {
+			flex: 1 1 0%;
+		}
+
+		.texts {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+
+			.title {
+				font-size: 1.8rem;
+				font-weight: 400;
+				line-height: 40px;
+			}
+
+			.sub-title {
+				font-size: 0.9rem;
+				font-weight: 300;
+			}
+
+			.paragraph {
+				margin-top: 2rem;
+			}
+
+			.contact-me {
+				margin-top: 2rem;
+			}
+		}
+
+		.img {
+			.blob {
+				fill: $primary-orange;
+				.blob-img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
