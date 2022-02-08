@@ -1,11 +1,102 @@
 @import '~src/variables';
 
 .section {
-	height: calc(100vh - #{$mobHeader});
+	min-height: calc(100vh - #{$mobHeader});
+	height: 100%;
 
-	.texts {
-		.title {
-			font-size: clamp(18px, 3vw, 32px);
+	.myContainer {
+		padding: 0 20px;
+
+		.texts {
+			.title {
+				font-size: clamp(18px, 3vw, 32px);
+			}
 		}
+
+		.skills {
+			padding-bottom: 54px;
+
+			.skill {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.title {
+					margin: 50px 0 10px;
+				}
+
+				.teste {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 10px;
+
+					.card {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+						word-wrap: break-word;
+						padding: 18px 24px;
+						border-radius: 20px;
+						user-select: none;
+						width: 100%;
+
+						.card-title {
+							font-size: 1.1rem;
+						}
+
+						.card-desc {
+							display: flex;
+							justify-content: center;
+							width: 100%;
+
+							p {
+								font-size: 1rem;
+								line-height: 18px;
+								width: 70%;
+							}
+
+							i {
+								text-align: center;
+								font-size: 2rem;
+								width: 30%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 730px) {
+	.section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.myContainer .skills .skill .teste {
+			flex-direction: row;
+
+			.card {
+				width: 49%;
+			}
+		}
+	}
+}
+
+@media (min-width: 850px) {
+	.section {
+		padding-top: $deskHeader;
+
+		.myContainer {
+			padding: 0 40px;
+		}
+	}
+}
+
+@media (min-width: 1050px) {
+	.section .myContainer .skills .skill .teste .card {
+		width: 32.3%;
 	}
 }
