@@ -61,6 +61,16 @@ module.exports = {
 				'b-lavander': '#BB86FC',
 				'b-yellow': '#f7de5f',
 			},
+			boxShadow: {
+				'light': '1px 1px 5px rgba(0, 0, 0, 0.3)',
+				'light-hover': '2px 2px 15px rgba(0, 0, 0, 0.3)',
+				
+				'dark': '1px 1px 5px rgba(140, 140, 140, 0.3)',
+				'dark-hover': '2px 2px 15px rgba(140, 140, 140, 0.3)'
+			},
+			transitionProperty: {
+				'theme': 'color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;'
+			}
 		},
 	},
 	variants: {

@@ -1,16 +1,37 @@
 <section class="section bg-lightMode-100 dark:bg-darkMode-100 text-darkMode-font-primary transicao">
 	<div class="myContainer">
 		<div class="texts">
-			<span class="title marked" style="--color: #fc801e">Skills</span>
+			<span class="title marked" style="--color: #fc801e">Trabalho</span>
 			<p class="paragraph text-lightMode-font-primary dark:text-darkMode-font-primary">
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi est dolore saepe? Quae laborum
-				ut eaque corrupti, ducimus eveniet fuga!
+				Imagine um texto muito foda que irá falar sobre seu trabalho, as coisas que você faz, suas
+				habilidades, peculiaridades e o quanto as pessoas deveriam confiar em ti e no seu trabalho
+				espetacu (lar ksedhbfskudahufjsdakf)
 			</p>
 		</div>
 		<div class="skills">
-			<div class="skill">
-				<h1 class="title">Indentidades Visuais</h1>
-				<div class="card"></div>
+			<div *ngFor="let skill of skills" class="skill">
+				<h1 class="title text-lightMode-font-primary dark:text-darkMode-font-primary transicao">
+					{{ skill.title }}
+				</h1>
+				<div class="teste">
+					<div
+						*ngFor="let card of skill.cards"
+						class="card bg-lightMode-200 shadow-light text-lightMode-font-primary hover:bg-lightMode-300 hover:shadow-light-hover active:shadow-light-hover active:bg-lightMode-300 dark:text-darkMode-font-primary dark:bg-darkMode-200 dark:hover:bg-darkMode-300 dark:shadow-dark dark:hover:shadow-dark-hover dark:active:shadow-dark-hover dark:active:bg-darkMode-300 transicao"
+					>
+						<div class="card-title">{{ card.cardTitle }}</div>
+						<div class="card-desc">
+							<p
+								class="text-lightMode-font-secundary dark:text-darkMode-font-secundary transicao"
+							>
+								{{ card.cardText }}
+							</p>
+							<i
+								class="text-lightMode-neonBlue dark:text-darkMode-neonBlue transicao"
+								[class]="card.cardIcon"
+							></i>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

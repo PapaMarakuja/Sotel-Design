@@ -70,25 +70,14 @@
 }
 
 .transicao {
-	@apply transition-colors duration-300;
+	@apply transition-theme duration-300;
 }
 
 .section {
 	height: 100vh;
-	padding: 0 20px;
 }
 
 .myContainer {
 	max-width: 1260px;
-	padding: 0 20px;
-}
-
-@media (min-width: 850px) {
-	.section {
-		padding: 0 40px;
-	}
-
-	.myContainer {
-		padding: 0 40px;
-	}
+	width: 100%;
 }
