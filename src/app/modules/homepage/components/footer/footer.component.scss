@@ -1,7 +1,7 @@
 @import '~src/variables';
 
 .section {
-	height: 80vh;
+	height: 60vh;
 	padding-bottom: $mobHeader;
 
 	.myContainer {
@@ -13,7 +13,6 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 
-		.middle-area,
 		.bottom-area,
 		.top-area {
 			display: flex;
@@ -34,9 +33,14 @@
 			}
 		}
 
+		.top-area {
+			padding-top: 8px;
+		}
+
 		.bottom-area {
 			justify-content: flex-end;
-			height: 30%;
+			padding: 8px 0;
+			height: auto;
 		}
 	}
 }
