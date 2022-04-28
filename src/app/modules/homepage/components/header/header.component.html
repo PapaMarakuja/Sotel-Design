@@ -1,25 +1,14 @@
 <header>
 	<div
-		class="
-			header
-			bg-lightMode-100
-			dark:bg-darkMode-100
-			text-lightMode-font-primary
-			dark:text-darkMode-font-primary
-			transicao
-		"
+		class="header bg-lightMode-100 dark:bg-darkMode-100 text-lightMode-font-primary dark:text-darkMode-font-primary transicao"
 	>
 		<div class="myContainer fix">
 			<div>Sotel.ArtDesign</div>
 			<div class="desktop-header">
 				<h1 (click)="redirectTo('home')" routerLink="" routerLinkActive="select">Home</h1>
-				<h1 (click)="redirectTo('skills')" routerLink="skills" routerLinkActive="select">
-					Habilidades
-				</h1>
+				<h1 (click)="redirectTo('skills')" routerLink="skills" routerLinkActive="select">Habilidades</h1>
 				<h1 (click)="redirectTo('about')" routerLink="about" routerLinkActive="select">Sobre</h1>
-				<h1 (click)="redirectTo('feedback')" routerLink="feedback" routerLinkActive="select">
-					Testemunhas
-				</h1>
+				<h1 (click)="redirectTo('feedback')" routerLink="feedback" routerLinkActive="select">Testemunhas</h1>
 			</div>
 			<div class="header-child">
 				<hero-icon
@@ -55,12 +44,7 @@
 				<hero-icon name="home" hostDisplay="inlineBlock" type="outline"></hero-icon>
 				<h1>Home</h1>
 			</div>
-			<div
-				(click)="redirectTo('skills')"
-				routerLink="skills"
-				routerLinkActive="select"
-				class="sub-child"
-			>
+			<div (click)="redirectTo('skills')" routerLink="skills" routerLinkActive="select" class="sub-child">
 				<hero-icon name="document-text" hostDisplay="inlineBlock" type="outline"></hero-icon>
 				<h1>Habilidades</h1>
 			</div>
@@ -68,12 +52,7 @@
 				<hero-icon name="user" hostDisplay="inlineBlock" type="outline"></hero-icon>
 				<h1>Sobre</h1>
 			</div>
-			<div
-				(click)="redirectTo('feedback')"
-				routerLink="feedback"
-				routerLinkActive="select"
-				class="sub-child"
-			>
+			<div (click)="redirectTo('feedback')" routerLink="feedback" routerLinkActive="select" class="sub-child">
 				<hero-icon name="user-group" hostDisplay="inlineBlock" type="outline"></hero-icon>
 				<h1>Testemunhas</h1>
 			</div>
