@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { HomeComponent } from './components/home/home.component';
+import { NovaIdentidadeComponent } from './components/nova-identidade/nova-identidade.component';
 import { RouterModule } from '@angular/router';
 import {
 	sun,
@@ -18,11 +19,25 @@ import {
 	cube,
 	annotation,
 	arrowUp,
-	HeroIconModule
+	HeroIconModule,
 } from 'ng-heroicon';
 @NgModule({
-	declarations: [HeaderComponent, FooterComponent, SkillsComponent, ProjectsComponent, HomeComponent],
-	exports: [FooterComponent, HeaderComponent, SkillsComponent, ProjectsComponent, HomeComponent],
+	declarations: [
+		HeaderComponent,
+		FooterComponent,
+		SkillsComponent,
+		ProjectsComponent,
+		HomeComponent,
+		NovaIdentidadeComponent,
+	],
+	exports: [
+		FooterComponent,
+		HeaderComponent,
+		SkillsComponent,
+		ProjectsComponent,
+		HomeComponent,
+		NovaIdentidadeComponent,
+	],
 	imports: [
 		CommonModule,
 		RouterModule,
@@ -38,12 +53,12 @@ import {
 				userGroup,
 				chevronUp,
 				x,
-				cube
+				cube,
 			},
 			{
-				defaultHostDisplay: 'block'
+				defaultHostDisplay: 'block',
 			}
-		)
-	]
+		),
+	],
 })
 export class HomepageModule {}

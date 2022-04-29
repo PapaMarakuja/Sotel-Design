@@ -7,25 +7,23 @@
 	.myContainer {
 		padding: 0 20px;
 
-		.texts {
-			.title {
-				font-size: clamp(18px, 3vw, 32px);
-			}
+		.title {
+			font-size: clamp(18px, 3vw, 32px);
 		}
 
 		.skills {
-			padding-bottom: 54px;
+			padding-bottom: 55px;
 
 			.skill {
 				display: flex;
 				flex-direction: column;
 				gap: 10px;
 
-				.title {
+				.skills-title {
 					margin: 50px 0 10px;
 				}
 
-				.teste {
+				.card-wrapper {
 					display: flex;
 					flex-wrap: wrap;
 					gap: 10px;
@@ -75,7 +73,7 @@
 		justify-content: center;
 		align-items: center;
 
-		.myContainer .skills .skill .teste {
+		.myContainer .skills .skill .card-wrapper {
 			flex-direction: row;
 
 			.card {
@@ -96,7 +94,7 @@
 }
 
 @media (min-width: 1050px) {
-	.section .myContainer .skills .skill .teste .card {
+	.section .myContainer .skills .skill .card-wrapper .card {
 		width: 32.3%;
 	}
 }

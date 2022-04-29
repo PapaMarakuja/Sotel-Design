@@ -47,9 +47,15 @@
 
 @media (min-width: 730px) {
 	.section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		.footer {
+			.top-area {
+				flex-direction: row;
+			}
+		}
+	}
+
+	.separator {
+		transform: rotate(90deg);
 	}
 }
 
@@ -62,4 +68,7 @@
 			padding: 0 40px;
 		}
 	}
+}
+
+@media (min-width: 1050px) {
 }
