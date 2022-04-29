@@ -3,6 +3,10 @@
 .section {
 	height: calc(100vh - #{$mobHeader});
 
+	.myContainer {
+		padding-inline: 20px;
+	}
+
 	.main {
 		display: flex;
 		flex-direction: column-reverse;
@@ -56,6 +60,10 @@
 		height: 100vh;
 		display: flex;
 		justify-content: center;
+
+		.myContainer {
+			padding-inline: 40px;
+		}
 
 		.main {
 			padding-top: $deskHeader;
