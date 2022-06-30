@@ -21,6 +21,7 @@ import {
 	arrowUp,
 	HeroIconModule,
 } from 'ng-heroicon';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
 @NgModule({
 	declarations: [
 		HeaderComponent,
@@ -29,6 +30,7 @@ import {
 		ProjectsComponent,
 		HomeComponent,
 		NovaIdentidadeComponent,
+		TestimonialComponent,
 	],
 	exports: [
 		FooterComponent,
@@ -37,6 +39,7 @@ import {
 		ProjectsComponent,
 		HomeComponent,
 		NovaIdentidadeComponent,
+		TestimonialComponent,
 	],
 	imports: [
 		CommonModule,

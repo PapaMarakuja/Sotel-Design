@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.scss']
+	styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
 	constructor() {}
 	isDark: boolean = false;
+	isScrolled: boolean = false;
 	localDarkmode = JSON.parse(localStorage.getItem('isDarkmode') || '{}');
 
 	ngOnInit(): void {
@@ -24,9 +25,7 @@ export class HeaderComponent implements OnInit {
 	openCloseMenu(): void {
 		const menu = document.getElementsByClassName('sub-menu');
 		const arrow = document.getElementById('abreMenu');
-		menu[0].classList.contains('active')
-			? menu[0].classList.remove('active')
-			: menu[0].classList.add('active');
+		menu[0].classList.contains('active') ? menu[0].classList.remove('active') : menu[0].classList.add('active');
 
 		arrow?.classList.contains('rotate-180')
 			? arrow.classList.remove('rotate-180')
@@ -72,5 +71,10 @@ export class HeaderComponent implements OnInit {
 				break;
 		}
 		this.openCloseMenu();
+	}
+
+	@HostListener('window:scroll')
+	scrollEvent() {
+		window.pageYOffset >= 80 ? (this.isScrolled = true) : (this.isScrolled = false);
 	}
 }
