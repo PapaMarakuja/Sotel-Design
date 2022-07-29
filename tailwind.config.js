@@ -15,6 +15,7 @@ module.exports = {
 					100: '#121212',
 					200: '#23272A',
 					300: '#818181',
+					glass: 'rgba(35, 39, 42, 0.125)',
 				},
 
 				lightMode: {
@@ -22,8 +23,9 @@ module.exports = {
 					'font-secundary': '#475569',
 					neonBlue: '#0ea5e9',
 					100: '#FFFFFF',
-					200: '#F2F2F2',
+					200: '#e0e0e0',
 					300: '#CCCCCC',
+					glass: 'rgba(224, 224, 224, 0.125)',
 				},
 
 				'dark-800': '#121212',

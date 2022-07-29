@@ -16,15 +16,15 @@ import { RouterModule } from '@angular/router';
 		RouterModule,
 		HeroIconModule.forRoot(
 			{
-				menu
+				menu,
 			},
 			{
 				defaultHostDisplay: 'inlineBlock', // default 'none'
-				attachDefaultDimensionsIfNoneFound: true // default 'false'
+				attachDefaultDimensionsIfNoneFound: true, // default 'false'
 			}
-		)
+		),
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
 })
 export class AppModule {}

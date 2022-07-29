@@ -1,0 +1,50 @@
+body.modal-open {
+	overflow: hidden;
+}
+
+app-modal {
+	display: none;
+
+	.modal {
+		display: grid;
+		place-items: center;
+		position: fixed;
+		inset: 0;
+		z-index: 1000;
+		overflow: auto;
+
+		.modal-body {
+			width: calc(100% - 2rem);
+			max-width: 800px;
+			margin-block: 1rem;
+			border-radius: 0.5rem;
+			padding: 0.3rem;
+
+			backdrop-filter: blur(16px) saturate(180%);
+			-webkit-backdrop-filter: blur(16px) saturate(180%);
+
+			h1 {
+				text-align: center;
+			}
+
+			.modal-header {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1rem;
+
+				h1 {
+					padding-left: 24px;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.modal-background {
+		position: fixed;
+		inset: 0;
+		background-color: rgba($color: #000, $alpha: 0.7);
+		z-index: 900;
+	}
+}

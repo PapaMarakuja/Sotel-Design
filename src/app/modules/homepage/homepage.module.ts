@@ -22,6 +22,7 @@ import {
 	HeroIconModule,
 } from 'ng-heroicon';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { ModalModule } from '../_modal';
 @NgModule({
 	declarations: [
 		HeaderComponent,
@@ -44,6 +45,7 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
 	imports: [
 		CommonModule,
 		RouterModule,
+		ModalModule,
 		HeroIconModule.withIcons(
 			{
 				annotation,
