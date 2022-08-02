@@ -5,7 +5,13 @@
 		<ng-container *ngIf="title">
 			<div class="modal-header">
 				<h1>{{ title }}</h1>
-				<hero-icon name="x" hostDisplay="inlineBlock" type="outline" class="w-6 h-6"></hero-icon>
+				<hero-icon
+					(click)="close()"
+					name="x"
+					hostDisplay="inlineBlock"
+					type="outline"
+					class="w-6 h-6 cursor-pointer"
+				></hero-icon>
 			</div>
 		</ng-container>
 		<div>

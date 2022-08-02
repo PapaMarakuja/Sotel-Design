@@ -48,7 +48,8 @@
 	border-radius: 0.75rem;
 	box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.3);
 	color: $lighMode-font-primary;
-	transition: background-color 0.125s ease-out, color 0.3s ease-out color 0.125s ease-out, color 0.3s ease-out;
+	transition: background-color 0.125s ease-out, color 0.3s ease-out color 0.125s ease-out, color 0.3s ease-out,
+		border-color 0.3s ease-out;
 
 	&.btn-primary {
 		background-color: $primary-orange;
@@ -60,8 +61,17 @@
 		}
 	}
 
+	&.btn-light {
+		background-color: $lighMode-200;
+		color: $lighMode-font-primary;
+
+		&:where(:hover, :active) {
+			background-color: #dadada;
+		}
+	}
+
 	&:not(:active) {
-		transition: padding 0.3s ease-in;
+		transition: padding 0.3s ease-in, border-color 300ms ease-in;
 	}
 
 	&:active {

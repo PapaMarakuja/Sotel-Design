@@ -1,5 +1,5 @@
 <div class="centraliza">
-	<form [formGroup]="form">
+	<form [formGroup]="form" class="form-body">
 		<label for="message">Mensagem:</label>
 		<textarea
 			class="message-area focus:ring-lightMode-neonBlue bg-lightMode-200 text-lightMode-font-secundary placeholder-lightMode-font-secundary dark:bg-darkMode-200 dark:text-darkMode-font-secundary dark:placeholder-darkMode-font-secundary dark:focus:ring-darkMode-neonBlue"
@@ -7,6 +7,18 @@
 			placeholder="Digite aqui."
 			formControlName="mensagem"
 		></textarea>
+
+		<div class="btn-wrapper">
+			<button
+				class="btn btn-light zap dark:bg-darkMode-200 dark:text-darkMode-font-primary dark:active:bg-darkMode-100 dark:hover:bg-darkMode-100"
+			>
+				Whatsapp<i class="uil uil-whatsapp pl-2"></i>
+			</button>
+			<button
+				class="btn btn-light e-mail dark:bg-darkMode-200 dark:text-darkMode-font-primary dark:active:bg-darkMode-100 dark:hover:bg-darkMode-100"
+			>
+				E-mail<i class="uil uil-envelope-alt pl-2"></i>
+			</button>
+		</div>
 	</form>
-	<div>Footer</div>
 </div>

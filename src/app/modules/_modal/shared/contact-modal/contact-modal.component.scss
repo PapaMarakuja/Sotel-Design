@@ -1,10 +1,40 @@
-.message-area {
-	font-size: 0.8rem;
-	resize: vertical;
-	height: 5rem;
+.form-body {
+	display: grid;
 	width: 100%;
-	border-radius: 1rem;
-	border-collapse: collapse;
-	resize: none;
-	border: none !important;
+	gap: 0.8rem;
+
+	label {
+		margin-left: 0.8rem;
+	}
+
+	.message-area {
+		font-size: 0.8rem;
+		resize: vertical;
+		height: 5rem;
+		width: 100%;
+		border-radius: 1rem;
+		border-collapse: collapse;
+		resize: none;
+		border: none !important;
+	}
+
+	.btn-wrapper {
+		display: flex;
+		justify-content: center;
+		gap: 0.8rem;
+
+		.e-mail,
+		.zap {
+			border-width: 1px;
+			border-color: #0000;
+		}
+
+		.zap:where(:hover, :active) {
+			border-color: #25d366;
+		}
+
+		.e-mail:where(:hover, :active) {
+			border-color: #c71610;
+		}
+	}
 }
