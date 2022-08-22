@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-contact-modal',
@@ -14,4 +15,12 @@ export class ContactModalComponent implements OnInit {
 	});
 
 	ngOnInit(): void {}
+
+	sendMessage(type: string) {
+		if (type === 'zap') {
+			window.open('', '_blank');
+			return;
+		}
+		// envia e-mail.
+	}
 }
