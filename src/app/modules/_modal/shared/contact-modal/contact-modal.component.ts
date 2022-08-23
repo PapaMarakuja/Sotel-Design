@@ -16,11 +16,16 @@ export class ContactModalComponent implements OnInit {
 
 	ngOnInit(): void {}
 
-	sendMessage(type: string) {
-		if (type === 'zap') {
-			window.open('', '_blank');
-			return;
-		}
-		// envia e-mail.
+	whatsapp() {
+		window.open(
+			`https://wa.me/5547996986738?text=${encodeURIComponent(
+				this.form.get('mensagem')?.value || 'Olá, tenho interesse em seu trabalho! Podes me ajudar?'
+			)}+`,
+			'_blank'
+		);
+	}
+
+	insta() {
+		window.open('https://instagram.com/sotel.design?igshid=YmMyMTA2M2Y=', '_blank');
 	}
 }

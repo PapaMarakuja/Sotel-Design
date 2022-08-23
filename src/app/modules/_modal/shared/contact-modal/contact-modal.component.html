@@ -6,21 +6,21 @@
 			id="message"
 			placeholder="Digite aqui."
 			formControlName="mensagem"
-            maxlength="300"
+			maxlength="300"
 		></textarea>
 
 		<div class="btn-wrapper">
 			<button
 				class="btn btn-light zap dark:bg-darkMode-200 dark:text-darkMode-font-primary dark:active:bg-darkMode-100 dark:hover:bg-darkMode-100"
-                (click)="sendMessage('zap')"
-                >
+				(click)="whatsapp()"
+			>
 				Whatsapp<i class="uil uil-whatsapp pl-2"></i>
 			</button>
 			<button
 				class="btn btn-light e-mail dark:bg-darkMode-200 dark:text-darkMode-font-primary dark:active:bg-darkMode-100 dark:hover:bg-darkMode-100"
-                (click)="sendMessage('e-mail')"
-                >
-				E-mail<i class="uil uil-envelope-alt pl-2"></i>
+				(click)="insta()"
+			>
+				Direct<i class="uil uil-envelope-alt pl-2"></i>
 			</button>
 		</div>
 	</form>
