@@ -19,7 +19,8 @@ export class ContactModalComponent implements OnInit {
 	whatsapp() {
 		window.open(
 			`https://wa.me/5547996986738?text=${encodeURIComponent(
-				this.form.get('mensagem')?.value || 'Olá, tenho interesse em seu trabalho! Podes me ajudar?'
+				this.form.get('mensagem')?.value.toString().trim() ||
+					'Olá, tenho interesse em seu trabalho! Podes me ajudar?'
 			)}+`,
 			'_blank'
 		);
